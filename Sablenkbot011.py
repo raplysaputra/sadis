@@ -9,70 +9,19 @@ from bs4 import BeautifulSoup
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,subprocess
 
 
-cl = LINETCR.LINE()
-#cl.login(token="EyW8mMdmmgnYBHQdlmp0.9q2iIcfJltjghJCvoSD1Wa.uWZ+XbAkBO6TPSHaAgpkfWnsGt7sE54yCUc74sXW5Ow=")
-cl.login(token="Eyz1kwi73BRZcoFVBEK0.9q2iIcfJltjghJCvoSD1Wa.zCNFiVh6PIUqTDW5kGR3ZAhdRHOGDIEmRpmpD3uC/uQ=")
-cl.loginResult()
+dz = LINE("")
+dz.log("Auth Token : " + str(dz.authToken))
+dz.log("Timeline Token : " + str(dz.tl.channelAccessToken))
 
-ki = LINETCR.LINE()
-#ki.login(token="Eyfg6QGFHBFUFC8ZtkZ5.BAbZE0umy2dUOSbpoBpzPq.lXD2kRtVC24dED2mukQS8SWJq69jiPdbdSwYttfrEQg=")
-ki.login(token="Ey5zEYs1k42GfcgwuFW5.BAbZE0umy2dUOSbpoBpzPq.aFuBDRob29mHEyqomrfwZhECZCgV1I7at4jtu9+5C2M=")
-ki.loginResult()
-
-kk = LINETCR.LINE()
-#kk.login(token="Ey870DEVeRttxWG0kULc.YCFgbMZPhmkVN+eVj380ta.iJVSxeD+bc4PA1LUDs7vsCeCDLPRUCzX4+9TVC4HQfE=")
-kk.login(token="EycqLtYdxMprwXI82Toc.YCFgbMZPhmkVN+eVj380ta.clJAOazAPbG/P13d/+OoQkK299bBcNAmDmxDGqmgrvU=")
-kk.loginResult()
-
-kc = LINETCR.LINE()
-#kc.login(token="EyAO2wLu8PnLKEIxWZQf.jcKRHQZO/ZUdXspu91JKJW.qIV6DwN1HjPrUW6pq0JghQDflEV0c/mlCsPIn3SG/zM=")
-kc.login(token="EyJEERgQG8sj1AQbPd8f.jcKRHQZO/ZUdXspu91JKJW.94iJHWkW8o79IeHE1pnXbIE87UmVnQmQntfvKxboSSg=")
-kc.loginResult()
-
-kb = LINETCR.LINE()
-#kb.login(token="EyCivT3oBbQGe4azowY2.a3wwcrKoF7GSYZK8iLIneG.P2ZAwWDZRfny1TV8lUIguyLE+N19zD7Fb6KPLEv/H3w=")
-kb.login(token="EyPqBkFf4G4FsNhNrpv2.a3wwcrKoF7GSYZK8iLIneG.ydIzh4POaZqf5fHxgiJyLmfs3QL6IcW7RShb6BaTL44=")
-kb.loginResult()
-
-kd = LINETCR.LINE()
-#kd.login(token="EyHnUCm4FRj6OhuMDFpc.lRANtBt0XNe7AUiARUwHRa.KjwS09ZHV20cUlfGjeQEDjdt6fANy5XL7lrj0gUj/uY=")
-kd.login(token="Ey3we54LwAJJzj05l65c.lRANtBt0XNe7AUiARUwHRa.n7ksQ75kI0dhkcB53lZvK6tJZn2uvS4YxlcHCIjKuIs=")
-kd.loginResult()
-
-ke = LINETCR.LINE()
-#ke.login(token="EyHnUCm4FRj6OhuMDFpc.lRANtBt0XNe7AUiARUwHRa.KjwS09ZHV20cUlfGjeQEDjdt6fANy5XL7lrj0gUj/uY=")
-ke.login(token="EyMFpsK9qlLY99TeKMf2./LjutxDotUFL1qqbWYLg0G.RMoRCP/2JcALxjgnwsarhgMGTHjiy7DJWoiLCxPsL9w=")
-ke.loginResult()
-
-kg = LINETCR.LINE()
-#kg.login(token="EyHnUCm4FRj6OhuMDFpc.lRANtBt0XNe7AUiARUwHRa.KjwS09ZHV20cUlfGjeQEDjdt6fANy5XL7lrj0gUj/uY=")
-kg.login(token="Ey3Vhx8tzdaDY5qPHI4b.d+8dm1wfnENnVH33/TFNkW.laV8kfGy7anQXtcTfmOwPrE02cxO4QZbXO4ReP/4F+8=")
-kg.loginResult()
-
-kh = LINETCR.LINE()
-#kh.login(token="EyHnUCm4FRj6OhuMDFpc.lRANtBt0XNe7AUiARUwHRa.KjwS09ZHV20cUlfGjeQEDjdt6fANy5XL7lrj0gUj/uY=")
-kh.login(token="EyOZCatm9P5Wx0RgQyX4.q5eKTus+y7F5Lcc39+6ADa.F/1qG7DKHiSahPIbRYQ7wx/A3JCPPssHeJpzGeeNp6s=")
-kh.loginResult()
-
-kl = LINETCR.LINE()
-#kl.login(token="EyHnUCm4FRj6OhuMDFpc.lRANtBt0XNe7AUiARUwHRa.KjwS09ZHV20cUlfGjeQEDjdt6fANy5XL7lrj0gUj/uY=")
-kl.login(token="EyBieZ7K3xdyXDgP8hDc.z4y1C6W70neuRJnWGivNZa.iQid3lx838b4OOb33QkRqEARrg/vj1YSPB+Xuz71pao=")
-kl.loginResult()
-
-kt = LINETCR.LINE()
-#kt.login(token="
-kt.login(token="Ey4H8StcpASkk8CTbga6.fil0fVEpy07SxIHYe/xGrG.u/eBHwFOHFsW+S37jh2svrbkgym+zaVQdINe8AdHn/E=")
-kt.loginResult()
-
-kz = LINETCR.LINE()
-#kz.login(token="
-kz.login(token="Ey4H8StcpASkk8CTbga6.fil0fVEpy07SxIHYe/xGrG.u/eBHwFOHFsW+S37jh2svrbkgym+zaVQdINe8AdHn/E=")
-kz.loginResult()
-
-sw = LINETCR.LINE()
-#sw.login(token="
-sw.login(token="EyBVx2zRkqE7nEjFjwH9.pzD1VRZEG6ip2fZxru4LIq.OcZpWnlyFqGd5a7KQwd7R2X1ZZPWj1YiCGrg+XuSrUA=")
-sw.loginResult()
+#==============================================================================#
+call = dz
+oepoll = OEPoll(dz)
+dzMID = dz.profile.mid
+dzProfile = dz.getProfile()
+lineSettings = dz.getSettings()
+#==============================================================================#
+botStart = time.time()
+#==============================================================================#
 
 print u"login success"
 reload(sys)
@@ -179,25 +128,25 @@ helpMessage1 ="""  *** Set Group ***
 
   *** Set Group ***"""
 
-KAC=[cl,ki,kk,kc,kb,kd,ke,kh,kg,kl,kt,kz,sw]
-mid = cl.getProfile().mid 
-Amid = ki.getProfile().mid 
-Bmid = kk.getProfile().mid 
-Cmid = kc.getProfile().mid 
-Dmid = kb.getProfile().mid 
-Emid = kd.getProfile().mid 
-Fmid = ke.getProfile().mid 
-Gmid = kg.getProfile().mid 
-Hmid = kh.getProfile().mid 
-Imid = kl.getProfile().mid 
-Jmid = kt.getProfile().mid
-Kmid = kz.getProfile().mid
-Lmid = sw.getProfile().mid
-Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,Kmid,Lmid]
-admin = ["uf50d888821632d32461e37153ac775c0"]
-staff = ["ua24c0a637281eb43c2170abe7a606d80","uf50d888821632d32461e37153ac775c0"]
-owner = ["uf50d888821632d32461e37153ac775c0"]
-adminMID = 'uf50d888821632d32461e37153ac775c0'
+#KAC=[cl,ki,kk,kc,kb,kd,ke,kh,kg,kl,kt,kz,sw]
+#mid = cl.getProfile().mid 
+#Amid = ki.getProfile().mid 
+#Bmid = kk.getProfile().mid 
+#Cmid = kc.getProfile().mid 
+#Dmid = kb.getProfile().mid 
+#Emid = kd.getProfile().mid 
+#Fmid = ke.getProfile().mid 
+#Gmid = kg.getProfile().mid 
+#Hmid = kh.getProfile().mid 
+#Imid = kl.getProfile().mid 
+#Jmid = kt.getProfile().mid
+#Kmid = kz.getProfile().mid
+#Lmid = sw.getProfile().mid
+#Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid,Kmid,Lmid]
+#admin = ["uf50d888821632d32461e37153ac775c0"]
+#staff = ["ua24c0a637281eb43c2170abe7a606d80","uf50d888821632d32461e37153ac775c0"]
+#owner = ["uf50d888821632d32461e37153ac775c0"]
+#adminMID = 'uf50d888821632d32461e37153ac775c0'
 wait ={ 
     'contact':False,
     'autoJoin':True,
